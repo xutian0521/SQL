@@ -11,9 +11,16 @@ CREATE TABLE Person -- 创建表
      Age int(0) null 
 );
 -- 修改表(修改已有字段，新增字段)
-alter table Person modify column Id bigint not NULL AUTO_INCREMENT comment '主键', PRIMARY KEY(Id), add column Descr varchar(500) null comment '描述';
+alter table Person modify column Id bigint not NULL AUTO_INCREMENT comment '主键', PRIMARY KEY(Id);
+alter table Person add column Descr varchar(500) null comment '描述';
 -- 修改表(删除一个字段)
 ALTER TABLE `Test`.`Person` DROP COLUMN `FirstName`;
 -- 删除表
 drop table Person;
+rename table Person to PersonNew; --重命名表名
+alter table Person change Id IdNew; -- 重命名表字段
+
+desc Person; --显示表结构
+show create Person; --显示表结构创建的sql语句
+select database(); -- 显示当前使用的数据库
 
