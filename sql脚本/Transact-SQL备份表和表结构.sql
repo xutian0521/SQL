@@ -1,4 +1,4 @@
---±¸·Ý±í½á¹¹
+--å¤‡ä»½è¡¨ç»“æž„
 --select top 0 * into T_Scripts2 from T_Scripts
---±¸·ÝÕû¸ö±í
+--å¤‡ä»½æ•´ä¸ªè¡¨
 select * into T_Scripts2 from T_Scripts
